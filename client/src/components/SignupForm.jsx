@@ -5,7 +5,7 @@ import { CREATE_USER } from '../utils/mutation';
 import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
 
-const [addUser, {error}] = useMutation(CREATE_USER);
+
 
 
 const SignupForm = () => {
@@ -15,6 +15,7 @@ const SignupForm = () => {
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
+  const [addUser, {error}] = useMutation(CREATE_USER);
 
   const handleInputChange = async (event) => {
     event.preventDefualt();
